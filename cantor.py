@@ -12,17 +12,19 @@ def maxiteration(n,s):
 		elif n >= l[1]-mid and n <= l[1]:
 			return (l[1]-mid, l[1])
 
+#Give us the last iteration of the fractal that n can be found in given the two points S
 def maxiteration(n, s):
 	i = 0
 	while inMid(n,s) == False:
 		i += 1
-		mid = float(s[1]-s[0]/3)
+		mid = float(s[1]-s[0])/3
 		if n >= s[0] and n<= s[0] + mid:
 			s = (s[0], s[0]+mid)
 		if n >= s[0]+mid and n <= s[1]:
 			s = (s[0]+mid, s[1])
 	return i
 
+#Is N in the middle third between the points in S?
 def inMid(n, s):
 	mid = float(s[1]-s[0])/3
 	print "n:  " + str(n)
@@ -38,4 +40,4 @@ def inMid(n, s):
 print inMid(.5, (0, 1))
 print inMid(.222222222, (.48592, .78245))
 print inMid(.1234, (0,1))
-#print maxiteration(.1234, (0,1))
+print maxiteration(.10, (0,1))
