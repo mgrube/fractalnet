@@ -3,7 +3,7 @@
 #Give us the last iteration of the fractal that n can be found in given the two points S
 #Example: citeration(.0001234, (0,1))
 def citeration(n, s):
-	i = 0
+	i = 1
 	while inMid(n,s) == False:
 		i += 1
 		mid = float(s[1]-s[0])/3
