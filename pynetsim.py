@@ -13,8 +13,21 @@ number_of_swapping_tries = 5000
 #Standard deviation?
 #Number of 
 #N is our node, P is proposed
-def fractaldist(g, n):
-	nfractal(
+
+#Hey LOL I'm a formula!
+#(Fd*Gn)/Gs! LOL!
+#Fd - 1/3d - where d is fractal distance
+#Gn - 1/3n - where n is the generation our neghbor belongs to
+#Gs - 1/3s - where s is our generation
+#If we enforce this distribution via swaps, we get a strict fractal lattice!!! ^_^
+
+def neighborprobby(us, them):
+	Gn = 1/float(3*citeration(them[0], (0,1))))
+	Gs = 1/float(3*citeration(us[0], (0,1))))
+	Fd = 1/float(3*abs(citeration(them[0], (0,1))-citeration(us[0], (0,1))))
+	return float((Fd*Gn)/Gs)
+	
+
 
 #Calculate our euclidean distance between our position in the cantor complement and the space of (0,1)
 def euclidd(node1, node2):
