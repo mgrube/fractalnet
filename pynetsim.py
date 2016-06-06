@@ -20,10 +20,11 @@ number_of_swapping_tries = 5000
 #Gn - 1/3n - where n is the generation our neghbor belongs to
 #Gs - 1/3s - where s is our generation
 #If we enforce this distribution via swaps, we get a strict fractal lattice!!! ^_^
-
+#What if we're in the same generation? Our probability is 
+#our of neighborhood is simply 
 def neighborprobby(us, them):
-	Gn = 1/float(3*citeration(them[0], (0,1))))
-	Gs = 1/float(3*citeration(us[0], (0,1))))
+	Gn = 1/float(3*citeration(them[0], (0,1)))
+	Gs = 1/float(3*citeration(us[0], (0,1)))
 	Fd = 1/float(3*abs(citeration(them[0], (0,1))-citeration(us[0], (0,1))))
 	return float((Fd*Gn)/Gs)
 	
