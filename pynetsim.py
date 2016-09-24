@@ -77,7 +77,7 @@ def fswapiteration(g):
         node1 = n
         node2 = randomwalk(n, 6, g)
         fractal_swap_calc(g, node1, node2)
-    print "Swap iteration complete."
+    #print "Swap iteration complete."
 
 #Try our experimental way of organizing the network
 #This swaps in the fractal dimension only
