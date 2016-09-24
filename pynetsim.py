@@ -6,13 +6,13 @@ from cantor import *
 from DataStore import *
 number_of_swapping_tries = 5000
 
-#Hey LOL I'm a formula!
-#(Fd*Gn)/Gs! LOL!
+#Here's a formula to describe the probability of our neighbors:
+#(Fd*Gn)/Gs!
 #Fd - 1/3d - where d is fractal distance
 #Gn - 1/3n - where n is the generation our neghbor belongs to
 #Gs - 1/3s - where s is our generation
 #If we enforce this distribution via swaps, we get a strict fractal lattice!!! ^_^
-def neighborprobby(us, them):
+def neighborprobability(us, them):
 	Gn = 1/float(3*citeration(them[0], (0,1)))
 	Gs = 1/float(3*citeration(us[0], (0,1)))
 	Fd = 1/float(3*abs(citeration(them[0], (0,1))-citeration(us[0], (0,1))))
